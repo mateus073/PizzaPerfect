@@ -17,7 +17,7 @@
 
 .opcoes2 {
     background-color: var(--vermelho-claro);
-    padding: 25px;
+    padding: 1rem;
     border-top: solid 3px white;
     border-bottom: solid 3px white;
     display: grid;
@@ -28,7 +28,7 @@
 }
 
 
-
+/* modifiquei pra commit */
 .opc2 {
     list-style: none;
     filter: drop-shadow(2px, 2px, 2px, var(--vermelho-forte));
@@ -36,8 +36,8 @@
     color: var(--vermelho-marrom);
     font-size: 11pt;
     font-weight: 700;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 9px;
     width: 100%;
     border: solid 1px var(--vermelho-marrom);
 }

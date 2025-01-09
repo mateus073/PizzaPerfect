@@ -40,5 +40,4 @@ function prencheTela(dataop) {
             opcoes2.appendChild(newLi); // Adiciona o <li> à lista
         }
     }
-
 }
