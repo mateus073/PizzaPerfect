@@ -1,0 +1,57 @@
+/* main {
+    background: url('../img/fundo\ pizza.jpg');
+    background-position: center;
+    background-size: cover;
+} */
+
+.dApresenta {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    /* backdrop-filter: blur(5px); */
+}
+
+.dApresenta img {
+    width: 60%;
+}
+
+.opcoes {
+    background-color: var(--vermelho-claro);
+    padding: 25px;
+    border-top: solid 3px white;
+    border-bottom: solid 3px white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Define duas colunas iguais */
+    gap: 0.9rem;
+    margin-bottom: 20px;
+}
+
+
+
+.opc {
+    filter: drop-shadow(2px, 2px, 2px, var(--vermelho-forte));
+    text-align: center;
+    color: var(--vermelho-marrom);
+    font-size: 12pt;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    border: solid 1px var(--vermelho-marrom);
+}
+
+.opc:hover {
+    background-color: var(--vermelho-medio);
+}
+
+#proximo {
+    background-color: var(--vermelho-forte);
+    color: var(--branco);
+    filter: drop-shadow(2px 2px 3px var(--vermelho-marrom));
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14pt;
+    font-weight: 700;
+}

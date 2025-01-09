@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --vermelho-marrom: #5c0209;
+    --vermelho-forte: #af0f1c;
+    --vermelho-medio: #a12630;
+    --vermelho-claro: #e99da6;
+    --vermelho-claro-claro: #e6b0b8;
+    --branco: #fcfbfb;
+    --branco-cima: #e7e3e3;
+    --font-titulo: "Baloo 2", serif;
+
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(150deg, var(--vermelho-medio), var(--vermelho-claro));
+}
+
+.cabecalho {
+    display: flex;
+    padding: 10px;
+    background: linear-gradient(90deg, var(--vermelho-marrom), var(--vermelho-forte), var(--vermelho-medio));
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho img {
+    height: 45px;
+    border-radius: 50%;
+}
+
+.dApresenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 1rem;
+}
+
+.dApresenta img {
+    max-width: 60%;
+}
+
+.dApresenta p {
+    background-color: var(--vermelho-claro-claro);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--vermelho-marrom);
+}
+
+.bt {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    margin:15px 0px ;
+
+}
+.dApresenta button {
+    padding: 10px;
+    border-radius: 18px;
+    background-color: transparent;
+    font-family: var(--font-titulo);
+    border: none;
+    font-size: 22pt;
+    font-weight: 1000;
+}
+
+.dApresenta a {
+    font-family: var(--font-titulo);
+    font-size: 22pt;
+    font-weight: 1100;
+}
+
+.imgola {
+    background-position: center;
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--vermelho-marrom);
+    color: white;
+    font-size: 8pt;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+footer img {
+    height: 25px;
+    margin: 3px 5px;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links p {
+    padding-bottom: 5px;
+}
+
+.criador {
+    font-size: 9pt;
+}
