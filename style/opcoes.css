@@ -76,7 +76,6 @@
     grid-template-columns: 1fr 1fr;
     /* Define duas colunas iguais */
     gap: 0.5rem;
-    margin-bottom: 20px;
 }
 
 
