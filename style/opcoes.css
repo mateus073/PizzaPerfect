@@ -41,9 +41,6 @@
     border: solid 1px var(--vermelho-marrom);
 }
 
-.opc:hover {
-    background-color: var(--vermelho-medio);
-}
 
 #proximo {
     background-color: var(--vermelho-forte);
@@ -93,9 +90,6 @@
     border: solid 1px var(--vermelho-marrom);
 }
 
-.opc2:hover {
-    background-color: var(--vermelho-medio);
-}
 
 #proximo2 {
     background-color: var(--vermelho-forte);
