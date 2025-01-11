@@ -3,9 +3,12 @@ let btnproximo1 = document.querySelector('#proximo')
 let opcoes = document.querySelectorAll('.opc');
 let divOpc1 = document.querySelector('.opc11')
 let divOpc2 = document.querySelector('.opc22')
+let divfinal = document.querySelector('.divFinal')
 let listaOpc = document.querySelector('.ol2');
 let aperto = true
 let igdeEscolhidos = []
+let TxtNamePizza = document.querySelector('.namePizz') //h2 com nome da pizza na div final
+let TxtIgdPizza = document.querySelector('.igdPizza') //p com ingredientes da pizza na div final 
 
 
 
@@ -15,7 +18,7 @@ let igdeEscolhidos = []
 opcoes.forEach(opc => {
     opc.addEventListener('click', (e) => {
         let ctgrEscolhida = e.target.getAttribute('data-op'); // Se o atributo "data-h" estiver no HTML
-        // deixa a categoria na cor vermelha e passa o nome do objeto que irei trablhar 
+        // deixa a categoria na cor vermelha e passa o nome do objeto que irei trablhar
         if (aperto) {
             e.target.style.backgroundColor = "#a12630"
             prencheTela(ctgrEscolhida);
@@ -57,7 +60,7 @@ function prencheTela(dataop) {
 
 
 
-// funcao reposavel por pegar as pizzas que o usuario clicou e mudar sua cor 
+// funcao reposavel por pegar as pizzas que o usuario clicou e mudar sua cor
 function escolhePizza(categoriaEscolhida) {
     document.querySelectorAll('.opc2').forEach(opcVez => {
         opcVez.addEventListener('click', (e) => {
@@ -76,24 +79,55 @@ function escolhePizza(categoriaEscolhida) {
 }
 
 
-// funcao pra retorna a pizza que mais se assemelha aos ingredientes escolhidos 
+// funcao que retorna a pizzza final, a que mais se encaixa nos ingredientes escolhidos 
 function retornaPizza(igdeEscolhidos, cardapEscolhido) {
-    let arrayObjCardap = cardapEscolhido.pizzas
-    let igdArray = igdeEscolhidos
-    console.log(igdArray)
-    console.log(arrayObjCardap)
-    
-    console.log(Array.isArray(igdArray) )
+    // Verificar se os parâmetros são válidos
+    if (!Array.isArray(igdeEscolhidos) || typeof cardapEscolhido !== "object" || !Array.isArray(cardapEscolhido.pizzas)) {
+        console.error("Os parâmetros fornecidos estão incorretos.");
+        return null;
+    }
 
-    return arrayObjCardap.map(objVez => {
-        // conta quantos igred cada pizza tem semelhante aos escolhidos 
-        const contador = objVez.ingredientes.filter(item => {
-            return igdArray.includes(item)
-        }).length;
-        return { nome: objVez.nome, quantidadeIguais: contador }
-        // return console.log({ nome: objVez.nome, quantidadeIguais: contador })
-    })
-    .reduce((maior, atual) => atual.quantidadeIguais > maior.quantidadeIguais ? atual : maior
-    )}
+    const arrayObjCardap = cardapEscolhido.pizzas; // Array de objetos com arrays dentro
+    const igdArray = igdeEscolhidos; // Array normal com os ingredientes escolhidos
 
 
+    // Fazer o mapeamento para contar os ingredientes iguais
+    const pizzasComContagem = arrayObjCardap.map(objVez => {
+        const contador = objVez.ingredientes.filter(item => igdArray.includes(item)).length;
+        
+        return { nome: objVez.nome, ingredientes: objVez.ingredientes, quantidadeIguais: contador, };// Retornar o objeto com o nome da pizza e a quantidade de ingredientes iguais
+    });
+
+    // Encontrar a pizza com a maior quantidade de ingredientes semelhantes
+    const pizzaMaisSemelhante = pizzasComContagem.reduce((maior, atual) =>
+        atual.quantidadeIguais > maior.quantidadeIguais ? atual : maior
+    );
+
+    // Exibir o resultado final no console
+    console.log("Pizza mais semelhante:", pizzaMaisSemelhante);
+   
+    // chama a funcao que ira exibir o resultado final
+    exibePizzaFinal(pizzaMaisSemelhante)
+
+    return pizzaMaisSemelhante;
+}
+
+
+
+// funcao reponsavel por exibir a div final e a pizza final do cliente
+//  recebe o nome da pizza que mais se encaixa
+//  recebe o cardapio escolhido
+//
+function exibePizzaFinal(pizzaMaisSemelhante) {
+    if(pizzaMaisSemelhante) {
+        divOpc1.style.display = "none"
+        divOpc2.style.display = "none"
+        divfinal.style.display = "flex"
+
+        let nomeFinal = pizzaMaisSemelhante.nome
+        let ingredienteFin = pizzaMaisSemelhante.ingredientes.join(", ")
+
+        TxtNamePizza.innerText = nomeFinal
+        TxtIgdPizza.innerText = ingredienteFin
+    }
+}

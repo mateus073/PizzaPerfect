@@ -4,6 +4,20 @@
     background-size: cover;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+:root {
+    --vermelho-marrom: #5c0209;
+    --vermelho-forte: #af0f1c;
+    --vermelho-medio: #a12630;
+    --vermelho-claro: #e99da6;
+    --vermelho-claro-claro: #e6b0b8;
+    --branco: #fcfbfb;
+    --branco-cima: #e7e3e3;
+    --font-titulo: "Baloo 2", serif;
+
+}
+
 .dApresenta {
     display: flex;
     flex-direction: column;
@@ -51,6 +65,9 @@
     margin-bottom: 10px;
     font-size: 14pt;
     font-weight: 700;
+    border-radius: 20px;
+    border: none;
+
 }
 
 
@@ -100,9 +117,57 @@
     margin-bottom: 10px;
     font-size: 12pt;
     font-weight: 700;
+    border-radius: 20px;
+    border: none;
 }
 
 
 .clicou {
     background-color: var(--vermelho-medio);
+}
+
+
+
+
+/* css da div final */
+.divFinal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0.9rem;
+}
+
+
+.exibePizza {
+    background-color: var(--vermelho-claro);
+    padding: 1.5rem;
+    border-top: solid 3px white;
+    border-bottom: solid 3px white;
+    margin-bottom: 20px;
+}
+
+.divFinal h1 {
+    font-family: var(--font-titulo);
+    color: var(--branco);
+    margin-bottom: 1rem;
+}
+
+.divFinal p {
+    font-family: var(--font-titulo);
+    color: var(--vermelho-marrom);
+    font-weight: 600;
+}
+
+
+.divFinal h2 {
+    font-family: var(--font-titulo);
+    color: var(--branco);
+}
+
+
+
+.divFinal img {
+    width: 50%;
 }
