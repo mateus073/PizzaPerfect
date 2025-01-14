@@ -3,10 +3,10 @@
 // obs o array detro deles de ingredientes e pra listar os principais ingredientes de cada categoria e facilitar na hora de filtrar as pizzas 
 const cardapio = {
     pizzasDoces: {
-        ingredientesGerais: ["Confetti", "Chocolate branco", "Chocolate ao leite", 
-        "Bombom Ouro Branco", "Granulado", "Coco ralado", "Morango", "Uva", "Banana", "Doce de leite"],
+        ingredientesGerais: ["Confetti", "Chocolate branco", "Chocolate ao leite",
+            "Bombom Ouro Branco", "Granulado", "Coco ralado", "Morango", "Uva", "Banana", "Doce de leite"],
 
-         pizzas: [
+        pizzas: [
             {
                 nome: "Brigadeiro",
                 ingredientes: ["Chocolate ao leite", "Granulado"]

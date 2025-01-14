@@ -55,9 +55,9 @@
     border: solid 1px var(--vermelho-marrom);
 }
 
-
+/* #D3D3D3 ou #E0E0E0 */
 #proximo {
-    background-color: var(--vermelho-forte);
+    background-color:var(--vermelho-medio);
     color: var(--branco);
     filter: drop-shadow(2px 2px 3px var(--vermelho-marrom));
     text-align: center;
@@ -122,7 +122,12 @@
 }
 
 
+/* ativa no js */
 .clicou {
+    background-color: var(--vermelho-medio);
+}
+
+.clicou2 {
     background-color: var(--vermelho-medio);
 }
 

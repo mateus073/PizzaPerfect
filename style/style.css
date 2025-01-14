@@ -11,8 +11,8 @@
     --vermelho-marrom: #5c0209;
     --vermelho-forte: #af0f1c;
     --vermelho-medio: #a12630;
-    --vermelho-claro: #e99da6;
-    --vermelho-claro-claro: #e6b0b8;
+    --vermelho-claro: #e7909a;
+    --vermelho-claro-claro: #eca9b3;
     --branco: #fcfbfb;
     --branco-cima: #e7e3e3;
     --font-titulo: "Baloo 2", serif;
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(150deg, var(--vermelho-medio), var(--vermelho-claro));
+    background: linear-gradient(60deg, var(--vermelho-medio), var(--vermelho-claro));
 }
 
 .cabecalho {
